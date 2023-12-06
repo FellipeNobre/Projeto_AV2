@@ -18,7 +18,7 @@
             <li>
                 <a href="#">Login</a>
                 <ul class="submenu">
-                    <li><a href="#">Cadastro</a></li>
+                    <li><a href="/cadastro.html">Cadastro</a></li>
                     <li><a href="#">Recuperar Senha</a></li>
                 </ul>
             </li>
@@ -42,6 +42,16 @@
             <a href="#">Esqueceu sua senha?</a>
         </div>
     </div>
-    <script src="./assets/js/script.js"> </script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+         // Verifica se o parâmetro de URL 'cadastro' está presente
+    const urlParams = new URLSearchParams(window.location.search);
+    const cadastroParam = urlParams.get('cadastro');
+
+    // Se o parâmetro 'cadastro' estiver presente na URL, exibe um alerta informando sobre o redirecionamento após o cadastro
+    if (cadastroParam) {
+        alert("Você foi redirecionado para esta página após o cadastro.");
+    }
+    </script>
 </body>
 </html>

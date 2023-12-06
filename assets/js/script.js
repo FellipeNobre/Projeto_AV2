@@ -9,9 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const username = usernameInput.value;
         const password = passwordInput.value;
 
-        if (username.trim() === "" || password.trim() === "") {
-            alert("Por favor, preencha todos os campos.");
-        } else {
+        // Verifica se o usuário e a senha são 'admin'
+        if (username === "admin" && password === "1111") {
             alert("Login feito com sucesso!");
             // Limpar os campos de nome de usuário e senha
             usernameInput.value = "";
@@ -21,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(function () {
                 window.location.href = "index.html"; // Substitua com o nome do seu arquivo de página principal
             }, 100); // Tempo em milissegundos antes de redirecionar
+        } else {
+            alert("Usuário ou senha incorretos. Tente novamente.");
         }
     });
 });
